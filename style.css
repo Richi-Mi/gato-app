@@ -1,0 +1,135 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f9f9f9;
+    padding: 1em;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: cursive;
+    font-size: 4em;
+}
+.txt {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px
+}
+
+.cuadro {
+    position: relative;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    overflow: hidden;
+    transition: .2s all ease;
+}
+
+#cuadro00 {
+    border-top: none;
+    border-left: none;
+}
+
+#cuadro01 {
+    border-top: none;
+
+}
+
+#cuadro02 {
+    border-top: none;
+    border-right: none;
+}
+#cuadro10 {
+    border-left: none;
+}
+#cuadro12 {
+    border-right: none;
+}
+#cuadro20 {
+    border-left: none;
+    border-bottom: none;    
+}
+#cuadro21 {
+    border-bottom: none;  
+}
+#cuadro22 {
+    border-bottom: none;
+    border-right: none;
+}
+.boton {
+    width: 100%;
+    padding: 0.3em;
+    color: #fff;
+    border: none;
+    background-color: #f00;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: #800;
+}
+.div_info{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #000;
+    padding: 1em;
+}
+
+/* __ Linea Horizontal __*/
+.linea_horizontal::after {
+    content: "";
+    width: 100%;
+    height: 6px;
+    background-color: #f00;
+    position: absolute;
+}
+/*__ Linea Vertical __ */
+.linea_vertical::after {
+    content: "";
+    height: 100%;
+    width: 6px;
+    background-color: #f00;
+    position: absolute;
+}
+/*__ Diagonal Derecha __*/
+.diagonal_derecha::after {
+    content: "";
+    width: 150%;
+    height: 6px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #f00;
+}
+.diagonal_izquierda::after {
+    content: "";
+    width: 150%;
+    height: 6px;
+    position: absolute;
+    transform: rotate(135deg);
+    background-color: #f00;
+}
+.footer {
+    width: 100%;
+    background-color: #008;
+}
+.footer p {
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0.5em;
+    text-align: center;
+}
